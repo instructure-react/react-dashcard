@@ -1,6 +1,6 @@
-var React = require('react');
-var DashCard = require('../../lib/main');
-var clone = require('../../lib/helpers/clone');
+import React from 'react';
+import clone from '../../lib/helpers/clone';
+import DashCard from '../../lib/main';
 
 var STYLES = {
   heading: {
@@ -93,18 +93,18 @@ var COURSES = [
 ];
 
 var App = React.createClass({
-  getInitialState: function () {
+  getInitialState() {
     return {
       courses: COURSES
     };
   },
 
-  handleBackgroundChange: function (idx, color) {
+  handleBackgroundChange(idx, color) {
     this.state.courses[idx].background = color;
     this.forceUpdate();
   },
 
-  renderCourses: function () {
+  renderCourses() {
     var firstActionStyle = clone(STYLES.action);
     delete firstActionStyle.borderLeft;
 
@@ -136,7 +136,7 @@ var App = React.createClass({
     }.bind(this));
   },
 
-  render: function () {
+  render() {
     return (
       <div>
         {this.renderCourses()}
