@@ -22,7 +22,8 @@
   "homepage": "https://github.com/instructure-react/react-dashcard",
   "devDependencies": {
     "rackt-cli": "^0.3.2",
-    "react": "^0.13.3"
+    "react": "^0.13.3",
+    "react-flipcard": "^0.1.1"
   },
   "peerDependencies": {
     "react": "^0.13.3"

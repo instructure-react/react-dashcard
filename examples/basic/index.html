@@ -25,13 +25,23 @@
   }
 
   .ReactDashCard {
-    border: 1px solid #E8E8E8;
     color: #fff;
     width: 260px;
     height: 215px;
     margin: 30px;
     flex-grow: 1;
     -webkit-flex-grow: 1;
+  }
+
+  .ReactDashCard .ReactFlipCard__Front {
+    border: 1px solid #E8E8E8;
+  }
+
+  .ReactFlipCard,
+  .ReactFlipCard__Front,
+  .ReactFlipCard__Back {
+    width: 100%;
+    height: 215px;
   }
 </style>
 <body>
