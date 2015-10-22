@@ -1,8 +1,9 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import clone from '../../lib/helpers/clone';
 import DashCard from '../../lib/main';
 
-var STYLES = {
+const STYLES = {
   heading: {
     margin: 0,
     fontSize: 16
@@ -59,7 +60,7 @@ var STYLES = {
   }
 };
 
-var COURSES = [
+const COURSES = [
   {
     background: '#43A047',
     name: 'Biology 101',
@@ -92,7 +93,7 @@ var COURSES = [
   }
 ];
 
-var App = React.createClass({
+const App = React.createClass({
   getInitialState() {
     return {
       courses: COURSES
@@ -105,10 +106,10 @@ var App = React.createClass({
   },
 
   renderCourses() {
-    var firstActionStyle = clone(STYLES.action);
+    const firstActionStyle = clone(STYLES.action);
     delete firstActionStyle.borderLeft;
 
-    return this.state.courses.map(function (course, idx) {
+    return this.state.courses.map((course, idx) => {
       return (
         <DashCard
           key={idx}
@@ -133,7 +134,7 @@ var App = React.createClass({
           </div>
         </DashCard>
       );
-    }.bind(this));
+    });
   },
 
   render() {
@@ -149,4 +150,4 @@ var App = React.createClass({
   }
 });
 
-React.render(<App/>, document.getElementById('example'));
+ReactDOM.render(<App/>, document.getElementById('example'));
