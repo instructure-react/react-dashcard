@@ -21,11 +21,11 @@
   },
   "homepage": "https://github.com/instructure-react/react-dashcard",
   "devDependencies": {
-    "rackt-cli": "^0.5.2",
+    "rackt-cli": "^0.5.3",
     "react": "^0.14.0",
     "react-addons-test-utils": "^0.14.0",
     "react-dom": "^0.14.0",
-    "react-flipcard": "^0.2.0"
+    "react-flipcard": "^0.2.1"
   },
   "peerDependencies": {
     "react": "^0.14.0",
